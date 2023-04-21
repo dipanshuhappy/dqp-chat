@@ -35,6 +35,8 @@ model Account {
     id_token          String? // @db.Text
     session_state     String?
     user              User    @relation(fields: [userId], references: [id], onDelete: Cascade)
+    Message_toAccount          Message[] @relation("Message_toAccount")
+    Message_fromAccount          Message[] @relation("Message_fromAccount")
 
     @@unique([provider, providerAccountId])
 }
@@ -63,4 +65,16 @@ model VerificationToken {
     expires    DateTime
 
     @@unique([identifier, token])
+}
+
+model Message {
+    id        String   @id @default(cuid())
+    createdAt DateTime @default(now())
+    updatedAt DateTime @updatedAt
+    to_id    String 
+    from_id  String
+    email     String
+    message   String
+    to     Account @relation("Message_toAccount", fields: [to_id],references: [id] ,onDelete: Cascade)
+    from  Account @relation("Message_fromAccount", fields: [from_id],references: [id],onDelete: Cascade)
 }
