@@ -51,6 +51,12 @@ const Home: NextPage = () => {
                 href="#_"
                 className="mx-0 inline-block w-full py-2 text-left font-medium text-gray-700 hover:text-indigo-600 md:mx-2 md:w-auto md:px-0 md:text-center lg:mx-3"
               >
+                Message
+              </a>
+              <a
+                href="#_"
+                className="mx-0 inline-block w-full py-2 text-left font-medium text-gray-700 hover:text-indigo-600 md:mx-2 md:w-auto md:px-0 md:text-center lg:mx-3"
+              >
                 Blog
               </a>
               <a
@@ -130,6 +136,12 @@ const Home: NextPage = () => {
                         className="mx-0 inline-block w-full py-2 text-left font-medium text-gray-700 hover:text-indigo-600 md:mx-2 md:w-auto md:px-0 md:text-center lg:mx-3"
                       >
                         Features
+                      </a>
+                      <a
+                        href="#_"
+                        className="mx-0 inline-block w-full py-2 text-left font-medium text-gray-700 hover:text-indigo-600 md:mx-2 md:w-auto md:px-0 md:text-center lg:mx-3"
+                      >
+                        Message
                       </a>
                       <a
                         href="#_"
